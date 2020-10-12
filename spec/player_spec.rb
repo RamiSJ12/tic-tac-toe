@@ -1,10 +1,8 @@
 require './lib/player.rb'
-
 describe Player do
   describe '#initialize' do
-    let (:martin) { Player.new('Martin', 'x') }
-    let (:lalo) { Player.new('Lalo') }
-    
+    let(:martin) { Player.new('Martin', 'x') }
+    let(:lalo) { Player.new('Lalo') }
     it 'returns Martin' do
       expect(martin.name).to eql 'Martin'
     end

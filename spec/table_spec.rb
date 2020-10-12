@@ -3,8 +3,8 @@ require './lib/colors.rb'
 
 describe Table do
   describe '#initialize' do
-    let (:new_table) { Table.new }
-    let (:initial_table) { {'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9} }
+    let(:new_table) { Table.new }
+    let(:initial_table) { { '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9 } }
 
     it 'returns the initial table' do
       expect(new_table.table).to eql initial_table
