@@ -90,5 +90,12 @@ describe Table do
       new_table.modify_table(9, 'x')
       expect(new_table.check_win).to eql 3
     end
+
+    it 'only has 9 moves and after that the game will be a tie' do
+      9.times do
+        new_table.decrease_moves
+      end
+      expect(new_table.game_moves).to eql 0
+    end
   end
 end
