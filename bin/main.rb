@@ -92,7 +92,6 @@ def game_on
     elsif table_instance.game_moves.negative?
       game_on = false
     end
-    
     player_turn = player_turn == players[0] ? players[1] : players[0]
   end
 end
