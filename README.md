@@ -75,15 +75,15 @@ Once Rubocop is installed, you simply run `rubocop` in the terminal to test the 
 
 👤 **Martin Najjar**
 
-- GitHub: [@githubhandle](https://github.com/martinnajjar12/)
-- Twitter: [@twitterhandle](https://twitter.com/martin_najjar/)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/martinnajjar12/)
+- GitHub: [Martin Najjar](https://github.com/martinnajjar12/)
+- Twitter: [Martin Najjar](https://twitter.com/martin_najjar/)
+- LinkedIn: [Martin Najjar](https://linkedin.com/in/martinnajjar12/)
 
 👤 **Eduardo Baeza**
 
-- GitHub: [@githubhandle](https://github.com/edxco/)
-- Twitter: [@twitterhandle](https://twitter.com/lalo_nbc/)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/eduardo-n-baeza/)
+- GitHub: [Eduardo Baeza](https://github.com/edxco/)
+- Twitter: [Eduardo Baeza](https://twitter.com/lalo_nbc/)
+- LinkedIn: [Eduardo Baeza](https://www.linkedin.com/in/eduardo-n-baeza/)
 
 ## 🤝 Contributing
 
