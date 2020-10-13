@@ -23,6 +23,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 2.1, >= 2.1.2)
   rubocop (~> 0.81.0)
 
 BUNDLED WITH
