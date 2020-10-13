@@ -17,20 +17,20 @@ describe Table do
 
     context '#invalid_move' do
       it 'returns true if the index is greater than 9' do
-        expect(new_table.invalid_move(10)).to eql true
+        expect(new_table.invalid_move?(10)).to eql true
       end
 
       it 'returns true if the index is less than 1' do
-        expect(new_table.invalid_move(0)).to eql true
+        expect(new_table.invalid_move?(0)).to eql true
       end
 
       it 'returns false when the index is between 1..9' do
-        expect(new_table.invalid_move(2)).to eql false
+        expect(new_table.invalid_move?(2)).to eql false
       end
 
       it 'returns true when the index is x or o' do
         new_table.modify_table(9, 'x')
-        expect(new_table.invalid_move(9)).to eql true
+        expect(new_table.invalid_move?(9)).to eql true
       end
     end
 
