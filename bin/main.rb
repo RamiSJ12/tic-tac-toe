@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'pry'
 require_relative '../lib/player.rb'
 require_relative '../lib/table.rb'
 require_relative '../lib/colors.rb'
