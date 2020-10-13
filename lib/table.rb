@@ -29,7 +29,7 @@ class Table
                          end
   end
 
-  def invalid_move(move)
+  def invalid_move?(move)
     check = @table[:"#{move}"]
     check == 'o'.yellow || check == 'x'.pink || move > 9 || move < 1 ? true : false
   end

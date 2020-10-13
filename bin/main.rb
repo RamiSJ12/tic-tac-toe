@@ -12,7 +12,7 @@ def game_initializer
   puts 'Enter Player 2 name please'.blue
   player2 = gets.chomp
 
-  while check_player(player1, player2)
+  while check_player?(player1, player2)
     puts "#{player1} name is already taken, please choose another name:".red
     player2 = gets.chomp
   end
@@ -25,7 +25,7 @@ def game_initializer
   puts "#{first_player_name} Choose if x or o".blue
   first_player_sign = gets.chomp
 
-  while check_sign(first_player_sign)
+  while check_sign?(first_player_sign)
     puts 'Wrong sign! Choose either x or o please'.red
     first_player_sign = gets.chomp
   end
@@ -58,7 +58,7 @@ def game_on
   while game_on
     puts "#{player_turn.name} (#{player_turn.sign}) your turn to choose move:".blue
     move = gets.chomp.to_i
-    while table_instance.invalid_move(move)
+    while table_instance.invalid_move?(move)
       puts 'Invalid move, choose from 1 to 9?  :'.red
       move = gets.chomp.to_i
     end
