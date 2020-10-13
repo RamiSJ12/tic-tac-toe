@@ -64,12 +64,15 @@ def game_on
   while game_on
     puts "#{player_turn.name} (#{player_turn.sign}) your turn to choose move:".blue
     move = gets.chomp.to_i
+
     while table_instance.invalid_move?(move)
       puts 'Invalid move, choose from 1 to 9?  :'.red
       move = gets.chomp.to_i
     end
+
     table_instance.modify_table(move, player_turn.sign)
     show_table.call(table)
+
     case table_instance.check_win
     when 1
       puts "#{player_turn.name} Wins! With a row".green
@@ -81,6 +84,7 @@ def game_on
       puts "#{player_turn.name} Wins! With a diagonal".green
       table_instance.end_game
     end
+
     table_instance.decrease_moves
     if table_instance.game_moves.zero?
       puts "\nIt's Draw"
@@ -88,6 +92,7 @@ def game_on
     elsif table_instance.game_moves.negative?
       game_on = false
     end
+    
     player_turn = player_turn == players[0] ? players[1] : players[0]
   end
 end
