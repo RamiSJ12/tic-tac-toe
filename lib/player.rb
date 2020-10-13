@@ -7,7 +7,7 @@ class Player
 end
 
 def check_name?(player1)
-  player1 == "" ? true : false
+  player1 == ''
 end
 
 def check_player?(player1, player2)

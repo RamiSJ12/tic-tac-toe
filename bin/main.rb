@@ -10,7 +10,7 @@ def game_initializer
   player1 = gets.chomp
 
   while check_name?(player1)
-    puts "Please enter a name:".red
+    puts 'Please enter a name:'.red
     player1 = gets.chomp
   end
 
