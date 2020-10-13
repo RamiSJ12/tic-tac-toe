@@ -1,5 +1,5 @@
-require './lib/table.rb'
-require './lib/colors.rb'
+require_relative '../lib/table.rb'
+require_relative '../lib/colors.rb'
 # rubocop:disable Metrics/BlockLength
 
 describe Table do
