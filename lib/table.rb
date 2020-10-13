@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'colors.rb'
 # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 class Table
