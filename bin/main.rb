@@ -8,6 +8,12 @@ def game_initializer
   players_objects = []
   puts 'Enter Player 1 name please:'.blue
   player1 = gets.chomp
+
+  while check_name?(player1)
+    puts "Please enter a name:".red
+    player1 = gets.chomp
+  end
+
   players_objects << player1
   puts 'Enter Player 2 name please'.blue
   player2 = gets.chomp

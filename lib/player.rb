@@ -6,6 +6,10 @@ class Player
   end
 end
 
+def check_name?(player1)
+  player1 == "" ? true : false
+end
+
 def check_player?(player1, player2)
   player1.include?(player2) ? true : false
 end
