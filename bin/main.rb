@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'pry'
 require_relative '../lib/player.rb'
 require_relative '../lib/table.rb'
 require_relative '../lib/colors.rb'
@@ -67,7 +66,7 @@ def game_on
     move = gets.chomp.to_i
 
     while table_instance.invalid_move?(move)
-      puts 'Invalid move, choose from 1 to 9?  :'.red
+      puts 'Invalid move, please choose an available index:'.red
       move = gets.chomp.to_i
     end
 
