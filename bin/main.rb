@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'pry'
 require_relative '../lib/player.rb'
 require_relative '../lib/table.rb'
 require_relative '../lib/colors.rb'
@@ -53,13 +54,12 @@ def game_on
   end
 
   show_table.call(table)
-  game_moves = 9
   game_on = true
 
   while game_on
     puts "#{player_turn.name} (#{player_turn.sign}) your turn to choose move:".blue
     move = gets.chomp.to_i
-    while table_instance.valid_move(move)
+    while table_instance.invalid_move(move)
       puts 'Invalid move, choose from 1 to 9?  :'.red
       move = gets.chomp.to_i
     end
@@ -68,19 +68,19 @@ def game_on
     case table_instance.check_win
     when 1
       puts "#{player_turn.name} Wins! With a row".green
-      game_moves = -1
+      table_instance.end_game
     when 2
       puts "#{player_turn.name} Wins! With a column".green
-      game_moves = -1
+      table_instance.end_game
     when 3
       puts "#{player_turn.name} Wins! With a diagonal".green
-      game_moves = -1
+      table_instance.end_game
     end
-    game_moves -= 1
-    if game_moves.zero?
-      puts 'Game tie'.blue
+    table_instance.decrease_moves
+    if table_instance.game_moves.zero?
+      puts "\nIt's Draw"
       game_on = false
-    elsif game_moves.negative?
+    elsif table_instance.game_moves.negative?
       game_on = false
     end
     player_turn = player_turn == players[0] ? players[1] : players[0]
