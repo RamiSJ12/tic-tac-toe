@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/table.rb'
 require_relative '../lib/colors.rb'
 # rubocop:disable Metrics/BlockLength
