@@ -96,7 +96,7 @@ describe Table do
       end
     end
 
-    context '#decrease_moves' do
+    context '#check if the game is draw' do
       it 'only has 9 moves and after that the game will be a tie' do
         9.times do
           new_table.decrease_moves
