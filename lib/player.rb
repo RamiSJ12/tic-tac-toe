@@ -6,10 +6,14 @@ class Player
   end
 end
 
-def check_player(player1, player2)
+def check_name?(player1)
+  player1 == ''
+end
+
+def check_player?(player1, player2)
   player1.include?(player2) ? true : false
 end
 
-def check_sign(first_player_sign)
+def check_sign?(first_player_sign)
   first_player_sign.include?('x') || first_player_sign.include?('o') ? false : true
 end
